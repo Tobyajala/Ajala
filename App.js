@@ -1,12 +1,18 @@
 // App.js
-import React from 'react';
+import React from "react";
+import ReactDOM  from "react-dom/client";
 
-function App() {
-    return (
-        <div>
-            <h1>Hello, React!</h1>
-        </div>
-    );
-}
+const heading = React.createElement("span", {id:"myheading", className:"heading"}, "hello from React!");
 
-export default App;
+const JSXelement = <h1>JSX Element</h1>;
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(heading);
+
+//const parent = React.creatElement("div", {id:'parent'}, React.createElement("div", {}, [
+    //React.createElement("h1", {}, "I am H1 tag"),
+    //React.craeteElement("h2", {}, "I am H2 tag"),
+    // ]})
+
+console.log(heading);
